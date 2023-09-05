@@ -5,13 +5,6 @@ pipeline {
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
-  stages {
-    stage('Build and Test') {
-      steps {
-        // build the project and create a JAR file
-        sh 'mvn clean package'
-      }
-    }
     stage('Code Analysis with SonarQube') {
       environment {
         SONAR_URL = "http://192.168.24.58:9000"
