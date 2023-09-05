@@ -39,7 +39,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "SahilME11/sahil12/edit/main/Jenkinsfile"
+            GIT_REPO_NAME = "https://github.com/SahilME11/sahil12"
             GIT_USER_NAME = "SahilME11"
         }
         steps {
