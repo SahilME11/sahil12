@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'chaitannyaa/maven-plus-docker'
+      image 'docker pull maven'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
